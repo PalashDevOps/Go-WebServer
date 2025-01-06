@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Stylish Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f2f5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            div {
+                background: white;
+                padding: 20px 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            label {
+                font-size: 1rem;
+                color: #2c3e50;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                padding: 10px;
+                border: 1px solid #dcdde1;
+                border-radius: 5px;
+                font-size: 1rem;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus {
+                border-color: #1abc9c;
+            }
+
+            input[type="submit"] {
+                background: #1abc9c;
+                color: white;
+                padding: 10px;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            input[type="submit"]:hover {
+                background: #16a085;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                color: #2c3e50;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Contact Form</h1>
+            <form method="POST" action="/form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" value=""/>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" value=""/>
+
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" value=""/>
+
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" value=""/>
+
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>
